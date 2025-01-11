@@ -4,6 +4,8 @@
  */
 package com.mycompany.curso_java_enero;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aitor
@@ -26,21 +28,49 @@ public class Frm_ejercicio4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
+        btnProcesar = new javax.swing.JButton();
+
+        jTextField1.setText("jTextField1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnProcesar.setText("INGRESAR NÚMERO");
+        btnProcesar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProcesarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(286, 286, 286)
+                .addComponent(btnProcesar, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(337, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(123, 123, 123)
+                .addComponent(btnProcesar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(343, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnProcesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcesarActionPerformed
+        int suma=0;
+        while(suma<=100){
+            int n1= Integer.parseInt(JOptionPane.showInputDialog("Ingresa un número: "));
+            suma=suma+n1;
+            JOptionPane.showMessageDialog(null,"La suma es: "+suma);
+        }
+        JOptionPane.showMessageDialog(null,"La suma llegó a o más de 100");
+    }//GEN-LAST:event_btnProcesarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +108,7 @@ public class Frm_ejercicio4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnProcesar;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
